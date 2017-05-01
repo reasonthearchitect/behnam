@@ -20,4 +20,11 @@ public class MyController {
         this.template.convertAndSend("/topic/greetings", new Greeting(name));
         return new Greeting(name+ ": should be sent");
     }
+
+    @GetMapping("/api/denied")
+    //@SendTo("/topic/greetings")
+    public Greeting denied() throws Exception {
+        this.template.convertAndSend("/topic/greetings", new Greeting("DENIED"));
+        return new Greeting("DENIED : should be sent");
+    }
 }

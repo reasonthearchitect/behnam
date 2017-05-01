@@ -42,5 +42,5 @@ curl -X GET http://localhost:8080/api/hello/USER_NAME
 If the user is denied, send the following to API and a denied audio clip will play:
 
 ```
-curl -X GET http://localhost:8080/api/hello/DENIED
+curl -X GET http://localhost:8080/api/denied
 ```
